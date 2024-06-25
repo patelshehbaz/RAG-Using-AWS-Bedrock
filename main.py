@@ -81,7 +81,6 @@ def get_llm_response(llm, vectorstore_faiss, query):
         return_source_documents = True,
         chain_type_kwargs={"prompt": PROMPT})
 
-    
     response = qa({"query": query})
     return response['result']
 
